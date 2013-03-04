@@ -1,0 +1,21 @@
+# suffix
+pyg = 'ay'
+
+# user prompt
+original = raw_input('Enter a word:')
+
+# is the user's entry valid?
+if len(original) > 0 and original.isalpha():
+  word = original.lower()
+  first = word[0]
+	if (first == 'A' or first == 'E' or first == 'I' or first == 'O' or first == 'U') or (first == 'a' or first == 'e' or first == 'i' or first == 'o' or first == 'u'):
+		new_word = word + pyg
+		print "vowel"
+		print new_word
+	else:
+		new_word = word[1:len(word)] + word[0] + pyg
+		print "consonant" 
+		print new_word
+	print word
+else:
+	print 'empty'
